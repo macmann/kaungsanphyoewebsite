@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Personal portfolio website for Kaung San Phyoe, showcasing projects, experience, and contact details."
+    />
+    <title>Kaung San Phyoe | Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Kaung San Phyoe home">
+          <span class="brand-mark">K</span>
+          <span>Kaung San Phyoe</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Portfolio · Personal Website</p>
+          <h1 id="hero-title">Hi, I’m Kaung San Phyoe. I build clean digital experiences.</h1>
+          <p class="hero-copy">
+            A modern portfolio starter focused on thoughtful design, practical projects, and a clear path
+            for people to learn about your work.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">View projects</a>
+            <a class="button secondary" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <aside class="profile-card" aria-label="Profile highlight">
+          <div class="avatar" aria-hidden="true">KP</div>
+          <h2>Available for new opportunities</h2>
+          <p>Customize this card with your title, location, social links, and current focus.</p>
+          <div class="stats">
+            <div>
+              <strong>3+</strong>
+              <span>Featured projects</span>
+            </div>
+            <div>
+              <strong>100%</strong>
+              <span>Responsive</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section-shell split" id="about" aria-labelledby="about-title">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">A simple, polished place to introduce yourself.</h2>
+        </div>
+        <div class="section-copy">
+          <p>
+            Use this section to describe who you are, what you enjoy building, and the type of work you
+            want to be known for. The layout is intentionally easy to edit as your story grows.
+          </p>
+          <p>
+            Highlight your strengths, favorite tools, education, certifications, community work, or the
+            values that guide your projects.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-shell" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2 id="projects-title">Featured work</h2>
+          <p>Replace these examples with your best work, case studies, or experiments.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <span class="project-tag">Web App</span>
+            <h3>Portfolio Dashboard</h3>
+            <p>A personal analytics concept that presents work, goals, and milestones in one clean view.</p>
+            <a href="#contact" aria-label="Ask about Portfolio Dashboard">Learn more</a>
+          </article>
+          <article class="project-card">
+            <span class="project-tag">UI Design</span>
+            <h3>Creative Landing Page</h3>
+            <p>A responsive landing page template with strong visual hierarchy and smooth interactions.</p>
+            <a href="#contact" aria-label="Ask about Creative Landing Page">Learn more</a>
+          </article>
+          <article class="project-card">
+            <span class="project-tag">Automation</span>
+            <h3>Workflow Helper</h3>
+            <p>A small productivity tool idea for reducing repetitive tasks and documenting repeatable steps.</p>
+            <a href="#contact" aria-label="Ask about Workflow Helper">Learn more</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell timeline-section" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2 id="experience-title">What you can showcase here</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span>Now</span>
+            <div>
+              <h3>Building your personal brand</h3>
+              <p>Add your current role, studies, freelance focus, or learning journey.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span>Projects</span>
+            <div>
+              <h3>Practical portfolio work</h3>
+              <p>Share measurable outcomes, technologies used, and links to live demos or code.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span>Skills</span>
+            <div>
+              <h3>Tools and strengths</h3>
+              <p>List your core skills such as frontend development, design, writing, or problem solving.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Let’s create something useful.</h2>
+          <p>
+            Update the links below with your real email, GitHub, LinkedIn, or other profiles when you are ready.
+          </p>
+        </div>
+        <div class="contact-card">
+          <a href="mailto:hello@example.com">hello@example.com</a>
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Kaung San Phyoe. All rights reserved.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
