@@ -1,6 +1,8 @@
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 const year = document.querySelector("#year");
+const hero = document.querySelector(".hero");
+const heroImageCards = document.querySelectorAll(".hero-image-card");
 
 year.textContent = new Date().getFullYear();
 
@@ -14,6 +16,27 @@ navLinks.addEventListener("click", (event) => {
     navLinks.classList.remove("open");
     navToggle.setAttribute("aria-expanded", "false");
   }
+});
+
+const setHeroBackground = (selectedCard) => {
+  const heroBg = selectedCard.dataset.heroBg;
+
+  if (!heroBg) {
+    return;
+  }
+
+  hero.style.setProperty("--hero-image", `url("${heroBg}")`);
+
+  heroImageCards.forEach((card) => {
+    const isActive = card === selectedCard;
+    card.classList.toggle("active", isActive);
+    card.setAttribute("aria-pressed", String(isActive));
+  });
+};
+
+heroImageCards.forEach((card) => {
+  card.addEventListener("click", () => setHeroBackground(card));
+  card.addEventListener("mouseenter", () => setHeroBackground(card));
 });
 
 const tabButtons = document.querySelectorAll(".tab-button");
