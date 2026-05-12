@@ -265,70 +265,6 @@ h3 {
   margin-top: 28px;
 }
 
-.hero-image-strip {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  width: 100%;
-  max-width: 620px;
-  margin-top: 34px;
-}
-
-.hero-image-card {
-  position: relative;
-  min-height: clamp(116px, 12vw, 154px);
-  aspect-ratio: 16 / 9;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.64);
-  border-radius: 24px;
-  background: transparent;
-  box-shadow: 0 18px 46px rgba(19, 34, 56, 0.16);
-  cursor: pointer;
-}
-
-.hero-image-card img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  transition: transform 420ms ease;
-}
-
-.hero-image-card:hover img,
-.hero-image-card:focus-visible img,
-.hero-image-card.active img {
-  transform: scale(1.05);
-}
-
-.hero-image-card span {
-  position: absolute;
-  inset: auto 12px 12px;
-  display: block;
-  max-width: calc(100% - 24px);
-  padding: 8px 12px;
-  border-radius: 999px;
-  color: white;
-  background: rgba(19, 34, 56, 0.72);
-  overflow-wrap: anywhere;
-  text-align: center;
-  font-size: 0.78rem;
-  font-weight: 800;
-  line-height: 1.2;
-  backdrop-filter: blur(12px);
-}
-
-.hero-image-card.active {
-  border-color: rgba(37, 99, 235, 0.88);
-  box-shadow: 0 18px 48px rgba(37, 99, 235, 0.28);
-}
-
-.hero-image-card:focus-visible {
-  outline: 3px solid rgba(37, 99, 235, 0.42);
-  outline-offset: 4px;
-}
-
 .button {
   display: inline-flex;
   align-items: center;
@@ -589,9 +525,7 @@ h3 {
 }
 
 .skill-category-head {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
+  max-width: 680px;
 }
 
 .skill-category-head h3 {
@@ -603,44 +537,6 @@ h3 {
   color: var(--muted);
 }
 
-.skill-category-icon,
-.skill-mini-icon {
-  flex: 0 0 auto;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.24);
-}
-
-.skill-category-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 18px;
-}
-
-.skill-category-icon svg {
-  width: 28px;
-  height: 28px;
-  fill: currentColor;
-}
-
-.project-management-icon {
-  background: linear-gradient(135deg, #0052cc, #2684ff);
-}
-
-.delivery-icon {
-  background: linear-gradient(135deg, #0f766e, #14b8a6);
-}
-
-.languages-icon {
-  background: linear-gradient(135deg, #111827, #2563eb);
-}
-
-.libraries-icon {
-  background: linear-gradient(135deg, #16a34a, #61dafb);
-}
 
 .skill-list {
   display: flex;
@@ -658,8 +554,7 @@ h3 {
   min-height: 54px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 14px;
+  padding: 12px 16px;
   border: 1px solid rgba(19, 34, 56, 0.1);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.78);
@@ -674,51 +569,6 @@ h3 {
   box-shadow: 0 18px 40px rgba(37, 99, 235, 0.14);
 }
 
-.skill-pill img {
-  width: 28px;
-  height: 28px;
-  flex: 0 0 28px;
-  display: block;
-  object-fit: contain;
-}
-
-.skill-mini-icon {
-  min-width: 28px;
-  height: 28px;
-  padding: 0 6px;
-  border-radius: 9px;
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-}
-
-.mcp-icon {
-  background: linear-gradient(135deg, #7c3aed, #2563eb);
-}
-
-.api-icon {
-  background: linear-gradient(135deg, #111827, #475569);
-}
-
-.rag-icon {
-  background: linear-gradient(135deg, #0891b2, #14b8a6);
-}
-
-.sql-icon {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-}
-
-.nosql-icon {
-  background: linear-gradient(135deg, #16a34a, #047857);
-}
-
-.agile-icon {
-  background: linear-gradient(135deg, #14b8a6, #0f766e);
-}
-
-.waterfall-icon {
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
-}
 
 .credentials-grid {
   grid-template-columns: repeat(2, 1fr);
@@ -1051,10 +901,6 @@ h3 {
     font-size: clamp(2.65rem, 6.2vw, 4.8rem);
   }
 
-  .hero-image-strip {
-    gap: 12px;
-  }
-
   .profile-card {
     padding: 28px;
   }
@@ -1064,10 +910,6 @@ h3 {
   .hero {
     grid-template-columns: 1fr;
     align-items: start;
-  }
-
-  .hero-image-strip {
-    max-width: none;
   }
 
   .profile-card {
@@ -1148,10 +990,6 @@ h3 {
   .project-card,
   .skill-category {
     border-radius: 24px;
-  }
-
-  .hero-image-strip {
-    grid-template-columns: 1fr;
   }
 
   .showcase-card {
