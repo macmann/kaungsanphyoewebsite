@@ -60,21 +60,43 @@
             <a class="button primary" href="#experience">View experience</a>
             <a class="button secondary" href="#contact">Get in touch</a>
           </div>
-          <div class="hero-image-strip" aria-label="AI, technology, and blockchain visuals">
-            <figure>
+          <div class="hero-image-strip" aria-label="Interactive hero background selector">
+            <button
+              class="hero-image-card active"
+              type="button"
+              data-hero-bg="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+              aria-pressed="true"
+            >
               <img
                 src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900"
                 alt="Robotic hand reaching toward a glowing digital network"
               />
-              <figcaption>Agentic AI systems</figcaption>
-            </figure>
-            <figure>
+              <span>Agentic AI systems</span>
+            </button>
+            <button
+              class="hero-image-card"
+              type="button"
+              data-hero-bg="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+              aria-pressed="false"
+            >
               <img
-                src="https://images.pexels.com/photos/7887812/pexels-photo-7887812.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900"
-                alt="Blockchain workspace with laptop, phone, and calendar"
+                src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900"
+                alt="Team collaborating around laptops in a modern workspace"
               />
-              <figcaption>Blockchain product strategy</figcaption>
-            </figure>
+              <span>People operations</span>
+            </button>
+            <button
+              class="hero-image-card"
+              type="button"
+              data-hero-bg="https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+              aria-pressed="false"
+            >
+              <img
+                src="https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900"
+                alt="Agile planning board with sticky notes and product workflow"
+              />
+              <span>Agile product delivery</span>
+            </button>
           </div>
         </div>
         <aside class="profile-card" aria-label="Profile highlight">
@@ -300,14 +322,28 @@
             <p>These projects combine product thinking, hands-on delivery, and agentic AI patterns for HR, agile operations, API testing, and food discovery.</p>
           </div>
           <div class="projects-grid">
-            <article class="project-card featured-project">
-              <span class="project-tag">AI HR</span>
+            <article class="project-card featured-project brand-project brand-project-bconnect">
+              <div class="project-card-head">
+                <img
+                  class="project-logo project-logo-bconnect"
+                  src="https://i.ibb.co/gLJMYFwW/Gemini-Generated-Image-faynn3faynn3fayn.png"
+                  alt="b-connect logo"
+                />
+                <span class="project-tag">AI HR</span>
+              </div>
               <h3>b-connect</h3>
               <p>AI-powered HR system designed to streamline people operations, employee workflows, and HR service delivery.</p>
               <a class="project-link" href="https://www.b-connect.site" target="_blank" rel="noreferrer">Visit b-connect</a>
             </article>
-            <article class="project-card">
-              <span class="project-tag">Agile AI</span>
+            <article class="project-card brand-project brand-project-bboard">
+              <div class="project-card-head">
+                <img
+                  class="project-logo project-logo-bboard"
+                  src="https://www.bboard.site/logo.svg"
+                  alt="bboard logo"
+                />
+                <span class="project-tag">Agile AI</span>
+              </div>
               <h3>bboard</h3>
               <p>AI Scrum Master workspace for sprint planning, issue workflows, standups, QA coverage, and release coordination.</p>
               <a class="project-link" href="https://www.bboard.site" target="_blank" rel="noreferrer">Visit bboard</a>
@@ -465,7 +501,7 @@
 
     <footer class="footer">
       <p>&copy; <span id="year"></span> Kaung San Phyoe. All rights reserved.</p>
-      <p class="image-credit">Imagery: Pixabay and Pexels free-use sources.</p>
+      <p class="image-credit">Imagery: Pexels free-use sources and provided product assets.</p>
       <a href="#top">Back to top</a>
     </footer>
 

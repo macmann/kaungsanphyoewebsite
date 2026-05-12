@@ -11,7 +11,7 @@
   --gold: #f59e0b;
   --border: rgba(19, 34, 56, 0.12);
   --shadow: 0 24px 70px rgba(37, 99, 235, 0.16);
-  --hero-image: url("https://cdn.pixabay.com/photo/2026/02/06/14/56/geralt-blockchain-10107957_1280.jpg");
+  --hero-image: url("https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1600");
   --ai-hand-image: url("https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200");
   --ai-network-image: url("https://images.pexels.com/photos/8386437/pexels-photo-8386437.jpeg?auto=compress&cs=tinysrgb&w=1200");
   --blockchain-image: url("https://images.pexels.com/photos/7887812/pexels-photo-7887812.jpeg?auto=compress&cs=tinysrgb&w=1200");
@@ -234,24 +234,27 @@ h3 {
 
 .hero-image-strip {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
   max-width: 620px;
   margin-top: 34px;
 }
 
-.hero-image-strip figure {
+.hero-image-card {
   position: relative;
   min-height: 154px;
   aspect-ratio: 16 / 9;
   margin: 0;
+  padding: 0;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.64);
   border-radius: 24px;
+  background: transparent;
   box-shadow: 0 18px 46px rgba(19, 34, 56, 0.16);
+  cursor: pointer;
 }
 
-.hero-image-strip img {
+.hero-image-card img {
   width: 100%;
   height: 100%;
   display: block;
@@ -259,11 +262,13 @@ h3 {
   transition: transform 420ms ease;
 }
 
-.hero-image-strip figure:hover img {
+.hero-image-card:hover img,
+.hero-image-card:focus-visible img,
+.hero-image-card.active img {
   transform: scale(1.05);
 }
 
-.hero-image-strip figcaption {
+.hero-image-card span {
   position: absolute;
   inset: auto 12px 12px;
   padding: 8px 12px;
@@ -273,6 +278,16 @@ h3 {
   font-size: 0.78rem;
   font-weight: 800;
   backdrop-filter: blur(12px);
+}
+
+.hero-image-card.active {
+  border-color: rgba(37, 99, 235, 0.88);
+  box-shadow: 0 18px 48px rgba(37, 99, 235, 0.28);
+}
+
+.hero-image-card:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.42);
+  outline-offset: 4px;
 }
 
 .button {
@@ -499,6 +514,53 @@ h3 {
   background: var(--surface-soft);
   font-size: 0.78rem;
   font-weight: 800;
+}
+
+.project-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.project-card-head .project-tag {
+  margin-bottom: 0;
+}
+
+.project-logo {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 18px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 16px 34px rgba(19, 34, 56, 0.14);
+}
+
+.project-logo-bconnect {
+  padding: 2px;
+  object-fit: cover;
+}
+
+.project-logo-bboard {
+  padding: 10px;
+}
+
+.brand-project {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(238, 244, 255, 0.8)),
+    radial-gradient(circle at 18% 20%, rgba(20, 184, 166, 0.2), transparent 12rem);
+}
+
+.brand-project-bconnect::after {
+  background: rgba(20, 184, 166, 0.13);
+}
+
+.brand-project-bboard::after {
+  background: rgba(37, 99, 235, 0.12);
 }
 
 .timeline-section,
