@@ -24,9 +24,11 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
+  min-width: 320px;
   margin: 0;
   background:
     radial-gradient(circle at top left, rgba(20, 184, 166, 0.16), transparent 32rem),
@@ -35,6 +37,7 @@ body {
     var(--bg);
   color: var(--text);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -55,6 +58,7 @@ a {
 .section-shell,
 .footer {
   width: min(1120px, calc(100% - 40px));
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -77,9 +81,11 @@ a {
 }
 
 .brand {
+  min-width: 0;
   gap: 12px;
   font-weight: 800;
   letter-spacing: -0.03em;
+  white-space: nowrap;
 }
 
 .brand-logo {
@@ -126,14 +132,14 @@ a {
 
 .hero {
   position: relative;
-  min-height: calc(100vh - 76px);
+  min-height: min(760px, calc(100svh - 76px));
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
   align-items: center;
   gap: clamp(28px, 4vw, 52px);
   margin-top: 26px;
   margin-bottom: 22px;
-  padding-inline: clamp(24px, 4vw, 58px);
+  padding: clamp(42px, 6vw, 78px) clamp(24px, 4vw, 58px);
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 42px;
@@ -194,16 +200,16 @@ p {
 h1 {
   margin-bottom: 24px;
   max-width: 780px;
-  font-size: clamp(2.8rem, 7vw, 5.6rem);
-  line-height: 0.95;
-  letter-spacing: -0.08em;
+  font-size: clamp(2.7rem, 6.1vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.07em;
 }
 
 h2 {
   margin-bottom: 18px;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  line-height: 1;
-  letter-spacing: -0.06em;
+  font-size: clamp(1.9rem, 4.4vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.055em;
 }
 
 h3 {
@@ -429,7 +435,7 @@ h3 {
 .showcase-card h2 {
   max-width: 560px;
   margin-bottom: 0;
-  font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+  font-size: clamp(1.65rem, 3.2vw, 2.8rem);
 }
 
 .showcase-ai {
@@ -468,7 +474,7 @@ h3 {
 .info-card,
 .credential-card,
 .project-card {
-  min-height: 280px;
+  min-height: 240px;
   display: flex;
   flex-direction: column;
   padding: 28px;
@@ -503,7 +509,7 @@ h3 {
 }
 
 .skill-category {
-  min-height: 260px;
+  min-height: 230px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -548,6 +554,7 @@ h3 {
 .technical-list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
 }
 
 .skill-pill {
@@ -560,6 +567,8 @@ h3 {
   background: rgba(255, 255, 255, 0.78);
   color: var(--text);
   font-weight: 800;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
   box-shadow: 0 14px 34px rgba(19, 34, 56, 0.08);
   transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
 }
@@ -817,7 +826,7 @@ h3 {
 }
 
 .contact-card {
-  min-width: 280px;
+  min-width: min(360px, 100%);
   flex-direction: column;
   align-items: stretch;
   gap: 12px;
@@ -835,6 +844,7 @@ h3 {
   background: var(--surface-soft);
   color: var(--primary-dark);
   font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .contact-card > span {
@@ -898,7 +908,7 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(2.65rem, 6.2vw, 4.8rem);
+    font-size: clamp(2.55rem, 5.6vw, 4.35rem);
   }
 
   .profile-card {
@@ -910,9 +920,11 @@ h3 {
   .hero {
     grid-template-columns: 1fr;
     align-items: start;
+    min-height: auto;
   }
 
   .profile-card {
+    width: min(560px, 100%);
     max-width: 560px;
   }
 }
@@ -949,10 +961,27 @@ h3 {
 
   .hero {
     margin-top: 18px;
-    padding-top: 64px;
+    padding-block: clamp(42px, 8vw, 64px);
     background:
-      linear-gradient(180deg, rgba(248, 250, 252, 0.95) 0%, rgba(248, 250, 252, 0.86) 56%, rgba(19, 34, 56, 0.42) 100%),
+      linear-gradient(180deg, rgba(248, 250, 252, 0.95) 0%, rgba(248, 250, 252, 0.9) 58%, rgba(19, 34, 56, 0.32) 100%),
       var(--hero-image) center / cover;
+  }
+
+  .image-showcase,
+  .split,
+  .timeline-section,
+  .projects-section,
+  .credentials,
+  .skills-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .info-card,
+  .credential-card,
+  .project-card,
+  .skill-category {
+    min-height: auto;
   }
 
   .card-grid,
@@ -977,11 +1006,62 @@ h3 {
   }
 
   .section-shell {
-    padding: 68px 0;
+    padding: 52px 0;
+  }
+
+  .brand span {
+    max-width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hero {
+    width: min(100% - 24px, 1120px);
+    margin-top: 12px;
+    padding: 34px 18px;
+    border-radius: 28px;
   }
 
   h1 {
-    font-size: clamp(2.75rem, 18vw, 4rem);
+    margin-bottom: 18px;
+    font-size: clamp(2.25rem, 11vw, 3rem);
+    line-height: 1.04;
+    letter-spacing: -0.055em;
+  }
+
+  h2 {
+    font-size: clamp(1.65rem, 8vw, 2.25rem);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+  }
+
+  .hero-copy {
+    font-size: 1rem;
+  }
+
+  .availability-callout,
+  .profile-card,
+  .info-card,
+  .credential-card,
+  .project-card,
+  .skill-category,
+  .contact-card {
+    padding: 20px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .profile-photo {
+    width: 112px;
+    height: 112px;
+    margin-bottom: 20px;
+    border-radius: 24px;
+  }
+
+  .profile-banner {
+    min-height: 104px;
   }
 
   .profile-card,
@@ -993,9 +1073,17 @@ h3 {
   }
 
   .showcase-card {
-    min-height: 260px;
-    padding: 24px;
+    min-height: 220px;
+    padding: 22px;
     border-radius: 26px;
+  }
+
+  .timeline-item {
+    padding: 20px;
+  }
+
+  .contact-card {
+    min-width: 0;
   }
 
   .project-tabs,
@@ -1012,5 +1100,42 @@ h3 {
 
   .tab-button {
     width: 100%;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .nav,
+  .section-shell,
+  .footer {
+    width: min(100% - 20px, 1120px);
+  }
+
+  .brand span {
+    max-width: 150px;
+  }
+
+  .hero {
+    width: min(100% - 16px, 1120px);
+    padding-inline: 14px;
+  }
+
+  h1 {
+    font-size: 2.08rem;
+  }
+
+  h2 {
+    font-size: 1.55rem;
+  }
+
+  .project-tabs,
+  .availability-callout,
+  .profile-card,
+  .info-card,
+  .credential-card,
+  .project-card,
+  .skill-category,
+  .contact-card {
+    padding-inline: 16px;
   }
 }
